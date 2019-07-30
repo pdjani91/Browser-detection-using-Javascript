@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Browser Detection Test</title>
+	<script>
+    let browserName = "";
+    if(navigator.vendor.match(/google/i)) {
+        browserName = 'Current Browser is Google Chrome';
+    }
+    else if(navigator.vendor.match(/apple/i)) {
+        browserName = 'Current Browser is Apple Safari';
+    }
+    else if(navigator.userAgent.match(/firefox\//i)) {
+        browserName = 'Current Browser is Mozila Firefox';
+    }
+    else if(navigator.userAgent.match(/edge\//i)) {
+        browserName = 'Current Browser is Microsoft Edge';
+    }
+    else if(navigator.userAgent.match(/trident\//i)) {
+        browserName = 'Current Browser is Internet Explorer';
+    }
+    else
+    {
+        browserName = navigator.userAgent + "\n" + navigator.vendor;
+    }
+    alert(browserName);   
+</script>
+</head>
+<body>
+	<div>
+		<h1><script type="text/javascript">document.write(browserName)</script></h1>
+	</div>
+</body>
+</html>
